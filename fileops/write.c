@@ -1,3 +1,5 @@
+/* This program is to demonstrate write syscall*/
+
 #include<stdio.h>
 #include<unistd.h>
 #include<fcntl.h>

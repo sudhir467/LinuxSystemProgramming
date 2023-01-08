@@ -1,3 +1,5 @@
+/* This program is to demonstrate read syscall*/ 
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<unistd.h>

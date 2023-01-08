@@ -1,3 +1,5 @@
+
+/* This program is to demonstrate race condition*/
 #include<sys/types.h>
 #include<sys/stat.h>
 #include<fcntl.h>

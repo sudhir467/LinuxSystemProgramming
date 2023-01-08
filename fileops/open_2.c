@@ -1,3 +1,5 @@
+/* This program is to demonstrate open syscall*/
+
 #include<stdio.h>
 #include<sys/stat.h>
 #include<sys/types.h>
