@@ -1,4 +1,5 @@
-/* This program is to demonstrate lseek syscall*/
+/* This program is to demonstrate lseek syscall
+*/
 
 #include<string.h>
 #include<stdlib.h>
