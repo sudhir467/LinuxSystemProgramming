@@ -1,3 +1,5 @@
+/*Basic program to for library function utility*/
+
 #include<stdio.h>
 
 void main()
