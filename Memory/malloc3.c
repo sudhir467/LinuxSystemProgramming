@@ -23,7 +23,7 @@ int main()
 
     ints = sizeof(int);
     printf("Size of the int: %d \n", ints);
-    printf("Address of the pointer:%d \n", ptr);
+    printf("Address of the pointer:%ls \n", ptr);
 
     sz = sizeof(ptr);
     printf("Size of the ptr: %d \n", sz);
