@@ -1,0 +1,45 @@
+/*This program is to demonstrate signals*/
+
+#include<stdlib.h>
+#include<stdio.h>
+#include<unistd.h>
+#include<signal.h>
+
+/*Handler for SIGINT and SIGTERM */
+static void signal_handler(int signo)
+{
+    if(signo==SIGINT)
+    {
+        printf("Caught SIGINT! \n");
+    }
+    else if(signo==SIGTERM)
+    {
+        printf("Caught SIGTERM!\n");
+    }
+
+    exit(EXIT_SUCCESS);
+}
+
+int main(void)
+{
+    printf("\n  process ID is (%d)\n",getpid());
+    /*Here SIG_IGN is used, which makes to ignore the signal given by the signal handler*/
+    if(signal(SIGINT,SIG_IGN)==SIG_ERR)
+    {
+        fprintf(stderr,"Cannot ignore SIGHUP! \n");
+        exit(-1);
+    }
+
+    if(signal(SIGTERM, SIG_IGN)==SIG_ERR)
+    {
+        fprintf(stderr,"Cannot handle SIGTERM!\n");
+        exit(-1);
+    
+    }
+
+    while(1);
+
+
+
+
+}

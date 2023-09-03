@@ -1,4 +1,4 @@
-/* This program is to get the process id of process*/
+/ This program is to get the process id of process*/
 
 #include<stdio.h>
 #include<unistd.h>

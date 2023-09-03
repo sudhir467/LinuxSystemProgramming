@@ -24,7 +24,8 @@ int main()
         printf("\n Parent process: I have created child process with ID= (%d) \n", id);
         sleep(6);
         printf("\n Parent process exited \n");
-    }else
+    }
+    else
     {
         sleep(5);
         printf("\n child process id is (%d)\n ", getpid());

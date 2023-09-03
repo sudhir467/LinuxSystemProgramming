@@ -24,7 +24,7 @@ int main()
       printf("%pc\n",ptr + i);  
     }
 
-//Reallocating the new memeory
+    //Reallocating the new memory
     printf("Enter the new memory required:\n");
     scanf("%d",&n2);
 
