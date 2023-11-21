@@ -1,4 +1,4 @@
-/*Server program in socket programming*/
+/*This program is to transfer file from client to server*/
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -59,30 +59,20 @@ int main(int argc, char *argv[])
         error("Error on Accept");
     }
 
-    while (1)
+    FILE *fp;
+    int ch = 0;
+    fp = fopen("glad_recieved.txt", "a");
+    int words;
+
+    read(newsockfd, &words, sizeof(int));
+
+    while (ch != words)
     {
-        bzero(buffer, 255);
-        n = read(newsockfd, buffer, 255);
-        if (n < 0)
-        {
-            error("Error on reading");
-        }
-        printf("client: %s \n", buffer);
-        bzero(buffer, 255);
-        fgets(buffer, 255, stdin); /*reads bytes from stream in to array pointed by buffer*/
-        n = write(newsockfd, buffer, strlen(buffer));
-        if (n < 0)
-        {
-            error("Error on writing");
-        }
-
-        int i = strncmp("Bye", buffer, 3);
-
-        if (i == 0)
-        {
-            break;
-        }
+        read(newsockfd, buffer, 255);
+        fprintf(fp, "%s ", buffer);
+        ch++;
     }
+    printf("The file has been recieved successfully.!!");
 
     close(newsockfd);
     close(sockfd);
